@@ -1,0 +1,74 @@
+﻿@model PortalDelTrabajador2.Models.Permiso
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Permiso</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fecha)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fecha)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.desde)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.desde)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.hasta)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.hasta)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.trabajo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.trabajo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.firmadeljefe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.firmadeljefe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.firmadelgerente)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.firmadelgerente)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tipodeautorizacion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tipodeautorizacion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idtrabajador)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idtrabajador)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

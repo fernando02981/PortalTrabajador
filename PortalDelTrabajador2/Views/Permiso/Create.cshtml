@@ -1,0 +1,91 @@
+﻿@model PortalDelTrabajador2.Models.Permiso
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Permiso</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fecha)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fecha)
+            @Html.ValidationMessageFor(model => model.fecha)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.desde)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.desde)
+            @Html.ValidationMessageFor(model => model.desde)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.hasta)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.hasta)
+            @Html.ValidationMessageFor(model => model.hasta)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.trabajo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.trabajo)
+            @Html.ValidationMessageFor(model => model.trabajo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.firmadeljefe)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.firmadeljefe)
+            @Html.ValidationMessageFor(model => model.firmadeljefe)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.firmadelgerente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.firmadelgerente)
+            @Html.ValidationMessageFor(model => model.firmadelgerente)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tipodeautorizacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tipodeautorizacion)
+            @Html.ValidationMessageFor(model => model.tipodeautorizacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.idtrabajador)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.idtrabajador)
+            @Html.ValidationMessageFor(model => model.idtrabajador)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
