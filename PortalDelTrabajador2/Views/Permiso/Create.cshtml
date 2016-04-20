@@ -10,11 +10,12 @@
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Permiso</legend>
+        <legend>Formato de solicitud de autorización de trabajo fuera de la jornada ordinaria</legend>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.fecha)
         </div>
+
         <div class="editor-field">
             @Html.EditorFor(model => model.fecha)
             @Html.ValidationMessageFor(model => model.fecha)
@@ -32,20 +33,23 @@
         <div class="editor-label">
             @Html.LabelFor(model => model.hasta)
         </div>
-        <div class="editor-field">
+       
+         <div class="editor-field">
             @Html.EditorFor(model => model.hasta)
             @Html.ValidationMessageFor(model => model.hasta)
         </div>
+
+ 
 
         <div class="editor-label">
             @Html.LabelFor(model => model.trabajo)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.trabajo)
+            @Html.TextAreaFor(model => model.trabajo, new { @class = "resizer" } )
             @Html.ValidationMessageFor(model => model.trabajo)
         </div>
 
-        <div class="editor-label">
+  <!--  <div class="editor-label">
             @Html.LabelFor(model => model.firmadeljefe)
         </div>
         <div class="editor-field">
@@ -61,6 +65,8 @@
             @Html.ValidationMessageFor(model => model.firmadelgerente)
         </div>
 
+    -->
+
         <div class="editor-label">
             @Html.LabelFor(model => model.tipodeautorizacion)
         </div>
@@ -69,14 +75,18 @@
             @Html.ValidationMessageFor(model => model.tipodeautorizacion)
         </div>
 
-        <div class="editor-label">
+       
+      <!--  
+         <div class="editor-label">
             @Html.LabelFor(model => model.idtrabajador)
         </div>
+        
+        
         <div class="editor-field">
             @Html.EditorFor(model => model.idtrabajador)
             @Html.ValidationMessageFor(model => model.idtrabajador)
         </div>
-
+-->
         <p>
             <input type="submit" value="Create" />
         </p>
