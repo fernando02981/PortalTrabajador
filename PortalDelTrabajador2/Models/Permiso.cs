@@ -14,10 +14,10 @@ namespace PortalDelTrabajador2.Models
         [DataType(DataType.Date)]
         public DateTime fecha { get; set; }
 
-        [DataType(DataType.DateTime)]
+        //[DataType(DataType.DateTime)]
         public DateTime desde { get; set; }
 
-        [DataType(DataType.DateTime)]
+        //[DataType(DataType.DateTime)]
         public DateTime hasta { get; set; }
 
         [Required(ErrorMessage = "Genre must be specified")]
